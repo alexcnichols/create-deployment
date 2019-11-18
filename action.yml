@@ -1,0 +1,17 @@
+name: 'Create a Deployment'
+description: 'Create a deployment in your repository'
+author: 'alexcnichols'
+inputs:
+  environment: 
+    description: 'Name for the target deployment environment (e.g., production, staging, qa). Default: production'
+    required: false
+    default: 'production'
+outputs:
+  id:
+    description: 'The ID of the created Deployment'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'upload-cloud'
+  color: 'gray-dark'
